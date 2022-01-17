@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      .jumbotron,
+      .navbar,
+      .navigation {
+        background-color: #f6f6f6;
+      }
+
+      .navbar-brand {
+        clip-path: circle(36%);
+        /* 终于找到了一个可以合理剪裁图片的方式 */
+        /* 相对于object-fit:cover来说显示的效果更好 */
+        max-width: 50px;
+        max-height: 50px;
+        min-width: 25px;
+        min-height: 25px;
+      }
+    </style>
+    <title>507自救小组</title>
+  </head>
+  <link rel="stylesheet" href="./AlterCode.css" />
+  <body>
+    <!-- 遮盖登录框 -->
+    <main>
+      <div class="coverlayer" id="coverlayer"></div>
+
+      <div class="shadow p-5 popout" id="popout">
+        <div class="d-flex justify-content-end">
+          <a class="guanbi justify-content-end">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="currentColor"
+              class="bi bi-x"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+              />
+            </svg>
+            <!-- <button type="button" class="display:none;"></button> -->
+          </a>
+        </div>
+
+        <div class="mb-2 d-flex justify-content-center" id="loginimg">
+          <svg
+            t="1623834697012"
+            class="icon"
+            viewBox="0 0 1024 1024"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            p-id="2933"
+            width="64"
+            height="64"
+          >
+            <path
+              d="M320 725.333333h384l42.666667 234.666667H277.333333z"
+              fill="#333549"
+              p-id="2934"
+              style="user-select: auto"
+            ></path>
+            <path
+              d="M337.813333 746.666667l-34.922666 192h418.218666l-34.922666-192z"
+              fill="#B9BECA"
+              p-id="2935"
+              style="user-select: auto"
+            ></path>
+            <path
+              d="M106.666667 85.333333h810.666666a64 64 0 0 1 64 64v618.666667a64 64 0 0 1-64 64H106.666667a64 64 0 0 1-64-64V149.333333a64 64 0 0 1 64-64z"
+              fill="#333549"
+              p-id="2936"
+              style="user-select: auto"
+            ></path>
+            <path
+              d="M106.666667 106.666667a42.666667 42.666667 0 0 0-42.666667 42.666666v618.666667a42.666667 42.666667 0 0 0 42.666667 42.666667h810.666666a42.666667 42.666667 0 0 0 42.666667-42.666667V149.333333a42.666667 42.666667 0 0 0-42.666667-42.666666H106.666667z"
+              fill="#B9BECA"
+              p-id="2937"
+              style="user-select: auto"
+            ></path>
+            <path
+              d="M480 725.333333h64a32 32 0 0 1 0 64h-64a32 32 0 0 1 0-64z"
+              fill="#333549"
+              p-id="2938"
+              style="user-select: auto"
+            ></path>
+            <path
+              d="M480 746.666667a10.666667 10.666667 0 1 0 0 21.333333h64a10.666667 10.666667 0 1 0 0-21.333333h-64z"
+              fill="#FFEEB4"
+              p-id="2939"
+              style="user-select: auto"
+            ></path>
+            <path
+              d="M213.333333 896h597.333334a42.666667 42.666667 0 1 1 0 85.333333H213.333333a42.666667 42.666667 0 1 1 0-85.333333z"
+              fill="#333549"
+              p-id="2940"
+              style="user-select: auto"
+            ></path>
+            <path
+              d="M213.333333 917.333333a21.333333 21.333333 0 0 0 0 42.666667h597.333334a21.333333 21.333333 0 0 0 0-42.666667H213.333333z"
+              fill="#B9BECA"
+              p-id="2941"
+              style="user-select: auto"
+            ></path>
+            <path
+              d="M128 128h768a42.666667 42.666667 0 0 1 42.666667 42.666667v490.666666a42.666667 42.666667 0 0 1-42.666667 42.666667H128a42.666667 42.666667 0 0 1-42.666667-42.666667V170.666667a42.666667 42.666667 0 0 1 42.666667-42.666667z"
+              fill="#333549"
+              p-id="2942"
+              style="user-select: auto"
+            ></path>
+            <path
+              d="M128 149.333333a21.333333 21.333333 0 0 0-21.333333 21.333334v490.666666a21.333333 21.333333 0 0 0 21.333333 21.333334h768a21.333333 21.333333 0 0 0 21.333333-21.333334V170.666667a21.333333 21.333333 0 0 0-21.333333-21.333334H128z"
+              fill="#FFFFFF"
+              p-id="2943"
+              style="user-select: auto"
+            ></path>
+            <path
+              d="M213.333333 213.333333h597.333334a42.666667 42.666667 0 0 1 42.666666 42.666667v320a42.666667 42.666667 0 0 1-42.666666 42.666667H213.333333a42.666667 42.666667 0 0 1-42.666666-42.666667V256a42.666667 42.666667 0 0 1 42.666666-42.666667z"
+              fill="#333549"
+              p-id="2944"
+              style="user-select: auto"
+            ></path>
+            <path
+              d="M213.333333 234.666667a21.333333 21.333333 0 0 0-21.333333 21.333333v320a21.333333 21.333333 0 0 0 21.333333 21.333333h597.333334a21.333333 21.333333 0 0 0 21.333333-21.333333V256a21.333333 21.333333 0 0 0-21.333333-21.333333H213.333333z"
+              fill="#7DACFF"
+              p-id="2945"
+              style="user-select: auto"
+            ></path>
+            <path
+              d="M554.666667 469.333333h192a42.666667 42.666667 0 1 1 0 85.333334h-192a42.666667 42.666667 0 1 1 0-85.333334z"
+              fill="#333549"
+              p-id="2946"
+              style="user-select: auto"
+            ></path>
+            <path
+              d="M554.666667 490.666667a21.333333 21.333333 0 0 0 0 42.666666h192a21.333333 21.333333 0 0 0 0-42.666666h-192z"
+              fill="#FFFFFF"
+              p-id="2947"
+              style="user-select: auto"
+            ></path>
+            <path
+              d="M213.333333 213.333333h256v405.333334H213.333333a42.666667 42.666667 0 0 1-42.666666-42.666667V256a42.666667 42.666667 0 0 1 42.666666-42.666667z"
+              fill="#333549"
+              p-id="2948"
+              style="user-select: auto"
+            ></path>
+            <path
+              d="M448 234.666667H213.333333a21.333333 21.333333 0 0 0-21.333333 21.333333v320a21.333333 21.333333 0 0 0 21.333333 21.333333h234.666667V234.666667z"
+              fill="#FFEEB4"
+              p-id="2949"
+              style="user-select: auto"
+            ></path>
+            <path
+              d="M193.962667 251.477333l256 362.666667a10.666667 10.666667 0 1 0 17.408-12.288l-256-362.666667a10.666667 10.666667 0 0 0-17.408 12.288z"
+              fill="#333549"
+              p-id="2950"
+              style="user-select: auto"
+            ></path>
+            <path
+              d="M211.370667 592.810667l256-362.666667a10.666667 10.666667 0 1 0-17.408-12.288l-256 362.666667a10.666667 10.666667 0 1 0 17.408 12.288zM533.333333 394.666667h234.666667a10.666667 10.666667 0 1 0 0-21.333334H533.333333a10.666667 10.666667 0 1 0 0 21.333334zM533.333333 330.666667h234.666667a10.666667 10.666667 0 1 0 0-21.333334H533.333333a10.666667 10.666667 0 1 0 0 21.333334z"
+              fill="#333549"
+              p-id="2951"
+              style="user-select: auto"
+            ></path>
+          </svg>
+        </div>
+
+        <form class="text-center form-signin">
+          <div class="form-floating">
+            <input
+              type="password"
+              class="form-control"
+              id="floatingInput"
+              placeholder="name@example.com"
+            />
+            <label for="floatingInput">Old PassWord</label>
+          </div>
+          <div class="form-floating">
+            <input
+              type="password"
+              class="form-control"
+              id="floatingPassword"
+              placeholder="Password"
+            />
+            <label for="floatingPassword">Password</label>
+          </div>
+          <div class="form-floating">
+            <input
+              type="password"
+              class="form-control"
+              id="passwordcheck"
+              placeholder="Password"
+            />
+            <label for="passwordcheck">Password Check</label>
+          </div>
+
+          <!-- <div class="container">
+            <div class="row justify-content-between">
+              <div class="checkbox mb-3">
+                <label>
+                  <input type="checkbox" value="remember-me" /> Remember me
+                </label>
+              </div>
+              <div class="register" id="register">
+                <a href="./SignUp.html">Register now!</a>
+              </div>
+            </div>
+          </div> -->
+
+          <button class="w-100 btn btn-lg btn-primary my-4" type="submit">
+            Alter
+          </button>
+
+          <p class="mt-5 mb-3 text-muted">&copy; 2021 507自救小组</p>
+        </form>
+      </div>
+    </main>
+
+    <!-- 注册页面的实现 -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./rotation.js"></script>
+    <script src="./signin.js"></script>
+  </body>
+</html>

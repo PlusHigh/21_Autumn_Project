@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>折线图的绘制</title>
+<!--    <script src ="incubator-echarts-master/dist/echarts.js"></script>-->
+<!--    -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="../resources/echarts.min.js"></script>
+    <!--    <script src="src/main/resources/echarts.min.js"></script>-->
+
+
+
+</head>
+<body>
+<div id="main" style="height: 600px;width:900px;"></div>
+<script>
+
+    var nameset=[];//数组初始化
+    var numset1=[];
+    var numset2=[];
+    //获取csv对象
+    d3.csv("D:\\hadoophadoop\\test.csv",function(error,csvdata){
+
+        if(error){
+            console.log(error);
+        }else{
+            for( var i=0; i<csvdata.length; i++ ){
+                nameset.push(csvdata[i].day);           //对象转数组
+                numset1.push(parseFloat(csvdata[i].Height));
+                numset2.push(parseFloat(csvdata[i].Weight));
+            }
+
+            var myChart = echarts.init(document.getElementById("main"));
+
+            var option = {
+                color: ['#003366', '#006699'],
+                tooltip: {
+                    trigger: 'axis',
+                },
+
+                legend: {
+                    data: ['Height', 'Weight']
+                },
+
+                toolbox: {
+                    show: true,
+                    feature: {
+                        mark: {show: true},
+                        dataView: {show: true, readOnly: false},
+                        magicType: {show: true, type: ['line', 'bar']},
+                        restore: {show: true},
+                        saveAsImage: {show: true}
+                    }
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                calculable : true,
+                xAxis: [
+                    {
+                        type: 'category',
+                        data: nameset,
+                        axisPointer: {
+                            type: 'shadow'
+                        }
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: 'value',
+                        min: 35,
+                        max: 60,
+                        interval: 5,
+                    }
+                ],
+                series: [
+                    {
+                        name: 'p50',
+                        type: 'bar',
+                        data: numset1,
+                        color:'#003366'
+                    },
+                    {
+                        name: 'p80',
+                        type: 'bar',
+                        data: numset2,
+                        color:'#006699'
+                    }
+                ]
+            };
+
+            myChart.setOption(option);
+        }
+    });
+</script>
+</body>
+</html>

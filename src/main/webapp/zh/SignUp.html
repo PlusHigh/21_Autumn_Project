@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./form-validation.css">
+    <link rel="stylesheet" href="./signin.css">
+
+
+    <style>
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 474px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .container {
+    max-width: 356px;
+  }
+}
+
+     
+    </style>
+    <title>Hello, world!</title>
+  </head>
+
+  <body>
+    
+
+
+    <div class="container  shadow mt-5 p-5">
+        
+      <div class="d-flex justify-content-center">
+        <svg t="1623901756648" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1582" width="64" height="64"><path d="M149.333333 170.666667h746.666667a64 64 0 0 1 64 64v533.333333a64 64 0 0 1-64 64H149.333333a64 64 0 0 1-64-64V234.666667a64 64 0 0 1 64-64z" fill="#333549" p-id="1583" style="user-select: auto;"></path><path d="M149.333333 192a42.666667 42.666667 0 0 0-42.666666 42.666667v533.333333a42.666667 42.666667 0 0 0 42.666666 42.666667h746.666667a42.666667 42.666667 0 0 0 42.666667-42.666667V234.666667a42.666667 42.666667 0 0 0-42.666667-42.666667H149.333333z" fill="#FFEEB4" p-id="1584" style="user-select: auto;"></path><path d="M181.333333 256a53.333333 53.333333 0 0 1 53.333334 53.333333v42.666667a53.333333 53.333333 0 1 1-106.666667 0v-42.666667A53.333333 53.333333 0 0 1 181.333333 256z" fill="#333549" p-id="1585" style="user-select: auto;"></path><path d="M181.333333 277.333333A32 32 0 0 0 149.333333 309.333333v42.666667a32 32 0 0 0 64 0v-42.666667A32 32 0 0 0 181.333333 277.333333z" fill="#FFFFFF" p-id="1586" style="user-select: auto;"></path><path d="M64 298.666667h106.666667a21.333333 21.333333 0 0 1 21.333333 21.333333v21.333333a21.333333 21.333333 0 0 1-21.333333 21.333334H64a21.333333 21.333333 0 0 1-21.333333-21.333334v-21.333333a21.333333 21.333333 0 0 1 21.333333-21.333333z" fill="#333549" p-id="1587" style="user-select: auto;"></path><path d="M64 320v21.333333h106.666667v-21.333333z" fill="#7DACFF" p-id="1588" style="user-select: auto;"></path><path d="M181.333333 426.666667a53.333333 53.333333 0 0 1 53.333334 53.333333v42.666667a53.333333 53.333333 0 1 1-106.666667 0v-42.666667A53.333333 53.333333 0 0 1 181.333333 426.666667z" fill="#333549" p-id="1589" style="user-select: auto;"></path><path d="M181.333333 448A32 32 0 0 0 149.333333 480v42.666667a32 32 0 0 0 64 0v-42.666667A32 32 0 0 0 181.333333 448z" fill="#FFFFFF" p-id="1590" style="user-select: auto;"></path><path d="M64 469.333333h106.666667a21.333333 21.333333 0 0 1 21.333333 21.333334v21.333333a21.333333 21.333333 0 0 1-21.333333 21.333333H64a21.333333 21.333333 0 0 1-21.333333-21.333333v-21.333333a21.333333 21.333333 0 0 1 21.333333-21.333334z" fill="#333549" p-id="1591" style="user-select: auto;"></path><path d="M64 490.666667v21.333333h106.666667v-21.333333z" fill="#7DACFF" p-id="1592" style="user-select: auto;"></path><path d="M181.333333 597.333333a53.333333 53.333333 0 0 1 53.333334 53.333334v42.666666a53.333333 53.333333 0 1 1-106.666667 0v-42.666666A53.333333 53.333333 0 0 1 181.333333 597.333333z" fill="#333549" p-id="1593" style="user-select: auto;"></path><path d="M181.333333 618.666667A32 32 0 0 0 149.333333 650.666667v42.666666a32 32 0 0 0 64 0v-42.666666A32 32 0 0 0 181.333333 618.666667z" fill="#FFFFFF" p-id="1594" style="user-select: auto;"></path><path d="M64 640h106.666667a21.333333 21.333333 0 0 1 21.333333 21.333333v21.333334a21.333333 21.333333 0 0 1-21.333333 21.333333H64a21.333333 21.333333 0 0 1-21.333333-21.333333v-21.333334a21.333333 21.333333 0 0 1 21.333333-21.333333z" fill="#333549" p-id="1595" style="user-select: auto;"></path><path d="M64 661.333333v21.333334h106.666667v-21.333334z" fill="#7DACFF" p-id="1596" style="user-select: auto;"></path><path d="M320 597.333333h533.333333a42.666667 42.666667 0 0 1 42.666667 42.666667v64a42.666667 42.666667 0 0 1-42.666667 42.666667H320a42.666667 42.666667 0 0 1-42.666667-42.666667v-64a42.666667 42.666667 0 0 1 42.666667-42.666667z" fill="#333549" p-id="1597" style="user-select: auto;"></path><path d="M320 618.666667a21.333333 21.333333 0 0 0-21.333333 21.333333v64a21.333333 21.333333 0 0 0 21.333333 21.333333h533.333333a21.333333 21.333333 0 0 0 21.333334-21.333333v-64a21.333333 21.333333 0 0 0-21.333334-21.333333H320z" fill="#FFFFFF" p-id="1598" style="user-select: auto;"></path><path d="M437.333333 416a64 64 0 1 0 0-128 64 64 0 0 0 0 128z" fill="#333549" p-id="1599" style="user-select: auto;"></path><path d="M437.333333 394.666667a42.666667 42.666667 0 1 1 0-85.333334 42.666667 42.666667 0 0 1 0 85.333334z" fill="#7DACFF" p-id="1600" style="user-select: auto;"></path><path d="M565.333333 522.666667a128 128 0 1 0-256 0v10.666666h256v-10.666666z" fill="#333549" p-id="1601" style="user-select: auto;"></path><path d="M331.2 512a106.666667 106.666667 0 0 1 212.266667 0h-212.266667z" fill="#7DACFF" p-id="1602" style="user-select: auto;"></path><path d="M647.552 372.8l45.226667-45.248a10.666667 10.666667 0 1 0-15.061334-15.104l-45.269333 45.269333a10.666667 10.666667 0 0 0 15.104 15.082667z" fill="#333549" p-id="1603" style="user-select: auto;"></path><path d="M632.448 327.552l45.269333 45.226667a10.666667 10.666667 0 1 0 15.082667-15.061334l-45.248-45.269333a10.666667 10.666667 0 0 0-15.104 15.104zM732.885333 372.8l45.226667-45.248a10.666667 10.666667 0 1 0-15.061333-15.104l-45.269334 45.269333a10.666667 10.666667 0 0 0 15.104 15.082667z" fill="#333549" p-id="1604" style="user-select: auto;"></path><path d="M717.781333 327.552l45.269334 45.226667a10.666667 10.666667 0 1 0 15.082666-15.061334l-45.248-45.269333a10.666667 10.666667 0 0 0-15.104 15.104zM640 458.666667h213.333333a10.666667 10.666667 0 1 0 0-21.333334H640a10.666667 10.666667 0 1 0 0 21.333334zM640 522.666667h213.333333a10.666667 10.666667 0 1 0 0-21.333334H640a10.666667 10.666667 0 1 0 0 21.333334z" fill="#333549" p-id="1605" style="user-select: auto;"></path></svg>
+      </div>
+        <form class="needs-validation" novalidate>
+            <div class="mb-3">
+              <label for="username">Username</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="glyphicon glyphicon-user"></span>
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  placeholder="Username"
+                  required
+                />
+                <div class="invalid-feedback" style="width: 100%">
+                  Your username is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="mb-3 col-md-6">
+                    <label for="password1">Password</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="glyphicon glyphicon-user"></span>
+                      </div>
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="password1"
+                        placeholder="password"
+                        required
+                      />
+                      <div class="invalid-feedback" style="width: 100%">
+                        Your password is required.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-3 col-md-6">
+                    <label for="password2">Check Password</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="glyphicon glyphicon-user"></span>
+                      </div>
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="password2"
+                        placeholder="Enter your password again."
+                        required
+                      />
+                      <div class="invalid-feedback" style="width: 100%">
+                       The password do not match each other.
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            
+
+            <div class="mb-3">
+              <label for="email"
+                >Email <span class="text-muted">(Required)</span></label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="email"
+                required
+              />
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="email"
+                >Phone <span class="text-muted">(Required)</span></label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Phone"
+                required
+              />
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-5 mb-3">
+                <label for="country">Gender</label>
+                <select
+                  class="custom-select d-block w-100"
+                  id="country"
+                  required
+                >
+                  <option value="">Choose...</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid gender.
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="state">DOB</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="date"
+                  placeholder="Date Of Birth"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Please provide a valid state.
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="headimg">HeadImage</label>
+                <label class="text-muted d-flex justify-content-center" for="headimg">
+                  <svg t="1623911316560" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2557" width="48" height="48"><path d="M511.338 421.875l-221.281 238.02 64.44 60 110.79-119.221v336.521h92.16v-336.47l110.795 119.17 64.432-60z" p-id="2558" style="user-select: auto;"></path><path d="M882.262 86.803H141.739C63.463 86.803 0.007 150.259 0.007 228.535v566.929c0 78.276 63.456 141.732 141.732 141.732h157.663v-80H141.739c-34.039 0-61.732-27.693-61.732-61.732V228.536c0-34.04 27.693-61.732 61.732-61.732h740.522c34.04 0 61.732 27.693 61.732 61.732v566.929c0 34.039-27.692 61.732-61.732 61.732H724.6v80h157.662c78.276 0 141.732-63.456 141.732-141.732V228.536c0-78.277-63.456-141.733-141.732-141.733z" p-id="2559" style="user-select: auto;"></path></svg>
+                </label>
+                <input
+                  type="file"
+                  class="form-control"
+                  id="headimg"
+                  placeholder="File a headimage you like."
+                  style="display: none"
+                />
+                <div class="invalid-feedback">
+                  Please upload the proper headimage .
+                </div>
+              </div>
+            </div>
+
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                id="save-info"
+              />
+              <!-- <label class="custom-control-label" for="save-info"
+                >Save this information for next time</label
+              > -->
+            </div>
+
+            <hr class="mb-4" />
+            <button class="btn btn-primary btn btn-block" type="submit">
+             Sign Up
+            </button>
+          </form>
+       
+    </div>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy;2021 507自救小组</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Privacy</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
